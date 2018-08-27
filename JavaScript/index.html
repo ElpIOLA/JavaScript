@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="name" content="content">
+	<title>Sitio Web</title>
+
+	<style type="text/css" media="screen">
+		.cuadrado{
+			width: 150px;
+			height: 150px;
+			display: inline-block;
+			margin-right: 10px;
+			background: #9B9B9B;
+			border: 1px solid #000;
+			transition: 300ms all ease;
+		}
+		button{
+			padding: 4px;
+			margin: 4px;
+		}
+
+		.azul{
+			width: 300px;
+			height: 250px;
+			background: #392AFD;
+		}
+
+		.amarillo{
+			width: 300px;
+			height: 250px;
+			background: #EFF210;
+		}
+	</style>
+</head>
+<body>
+	<button id="boton">Aumentar Tamaño</button> 
+	<button id="boton2">Agregar Cuadrado</button> 
+
+	<section id="contenedor">
+		<div class="cuadrado"></div>
+	</section>
+
+	<script type="text/javascript">
+		(function(){
+
+			var boton = document.getElementById("boton");	
+			var boton2 = document.getElementById("boton2");
+
+			var agrandar = function(){
+				
+				for(var i = 0; i < document.getElementsByTagName("div").length ; i++)
+				{
+					var cuadrado = document.getElementsByTagName("div")[i];
+
+					if(cuadrado.className == "cuadrado"){
+						if(i %2 == 0){
+							cuadrado.className = "cuadrado azul";
+						}else{
+							cuadrado.className = "cuadrado amarillo";
+						}
+						
+					}else{
+						cuadrado.className = "cuadrado";
+					}
+				}
+			}
+		
+			var generarCuadrado = function(){
+				var elemento = document.createElement("div"),
+					padre = document.getElementById("contenedor"),
+					referencia = document.getElementsByTagName("div")[0];
+
+					elemento.setAttribute("class","cuadrado");
+					padre.insertBefore(elemento,referencia);
+			}
+			boton.addEventListener("click",agrandar);
+			boton2.addEventListener("click",generarCuadrado);		
+			
+		}())
+	</script>
+</body>
+</html>

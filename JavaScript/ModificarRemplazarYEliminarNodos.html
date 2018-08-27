@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sitio Web</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ol id="lista">
+		<li>El Club Atlético Boca Juniors, más conocido como Boca Juniors, o simplemente Boca.</li>
+		<li>Es una entidad deportiva de Argentina con sede en el barrio porteño de La Boca, Buenos Aires.</li>
+	</ol>
+
+	<script type="text/javascript">
+		
+		/**					MODIFICAR UN ELEMENTO DE LA LISTA
+		
+		//Accedemos al primer elemento de la lista.
+		var primerElemento = document.getElementsByTagName("li")[0];
+
+		//Accedemos al texto que contiene el primerElemento y lo modificamos.
+		primerElemento.innerHTML = "Nuevo Texto <i>ElpIOLA</i>"; 
+		*/
+
+		// 					ELIMINAMOS UN ELEMENTO.
+
+		//Creamos un elemento "LI".
+		var elemento = document.createElement("li"),
+
+			//Creamos una cadena de caracteres.
+			contenido = document.createTextNode("Nuevo Texto");
+
+			//Agregamos el texto al elemento.
+			elemento.appendChild(contenido);
+
+		var padre = document.getElementsByTagName("li")[0].parentNode,
+			primerElemento = document.getElementsByTagName("li")[0];
+
+		//Eliminamos el elemento seleccionado.
+		padre.removeChild(primerElemento);
+
+		
+
+		/*					REMPLAZAMOS UN ELEMENTO DE LA LISTA POR OTRO
+
+			//Accedemos al elemento padre de la lista.
+			var padre = document.getElementsByTagName("li")[0].parentNode,
+
+				//Accedemos al primer elemento de la lista.
+				primerElemento = document.getElementsByTagName("li")[0];
+
+			//Remplazamos el "primerElemento" por el "elemento".
+			padre.replaceChild(elemento,primerElemento); 
+		*/
+
+
+
+
+
+
+	</script>
+</body>
+</html>

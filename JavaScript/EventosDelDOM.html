@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="name" content="content">
+	<title>Sitio Web</title>
+</head>
+<body>
+	<!-- <button id="boton">Boton</button> -->
+	<a id="boton" href="http://www.falconmasters.com" >FalconMasters</a>
+	<input type="text" id="input">
+
+	<script type="text/javascript">
+		(function(){
+
+			var mensaje = function(e){
+				console.log('oh Yeah');
+				//Evita que vayamos a una pagina.
+				e.preventDefault();
+			};
+
+			var boton = document.getElementById("boton");
+
+			//Agregamos el evento a la variable boton. El evento "click" ejecuta la funcion que esta alado.
+			boton.addEventListener("click", mensaje);
+
+			//					Eventos del INPUT
+			//focus = Evento que se ejecuta cuando hacemos click en el input.
+			//blur = Evento que se ejecuta cuando hacemos click fuera del input.
+			//change = Evento que se ejecuta cuando escribimos dentro del input y luego hacemos click afuera del input. Y cuando hay un cambio.
+
+			//Elimina el evento.
+			//boton.removeEventListener("click",mensaje);
+
+
+		}())
+	</script>
+</body>
+</html>

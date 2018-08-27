@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="utf-8">
+          <title>Sitio Web</title>
+          <script src="10-CreandoNodosDOM.js" type="text/javascript"></script>
+     </head>
+     <body>
+
+     	<h1 id="titulo">Titulo de nuestro sitio Web</h1>
+
+          <div id="subtitulo"></div>
+
+     	<p>1.-El Club Atlético <b>Boca Juniors</b>, más conocido como Boca Juniors, o simplemente Boca, es una entidad deportiva de Argentina con sede en el barrio porteño de La Boca, Buenos Aires.</p>
+
+     	<p id="segundo">2.-Fue fundado en dicho barrio el 3 de abril de 1905 por seis vecinos adolescentes hijos de italianos.</p>
+
+     	<p>3-El fútbol es su disciplina más destacada, aunque también compite a nivel profesional, nacional e internacionalmente, en básquet, voley, futsal y fútbol femenino ,mientras que deportes como el boxeo, judo, karate, taekwondo, lucha, gimnasia rítmica y artística se practican a nivel amateur. 
+
+          <p>4.-Juega sus partidos como local en el estadio Alberto J. Armando, conocido mundialmente como «La Bombonera».</p>
+
+          <script type="text/javascript">
+               //1.- Crear el elemento
+               var elemento = document.createElement("h2");
+
+               //2.- Crear un nodo de texto
+               var contenido = document.createTextNode("Este es nuestro titular.");
+
+               //3.- Añadir el nodo de texto al elemento
+               elemento.appendChild(contenido);
+
+               //4.- Agregar atributos al elemento
+               elemento.setAttribute("align", "center");
+
+               //5.- Agregar el elemento al documento
+               document.getElementById("subtitulo").appendChild(elemento);
+          </script>
+     </body>
+</html>

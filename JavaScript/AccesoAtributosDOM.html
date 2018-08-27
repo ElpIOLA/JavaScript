@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Atributos DOM</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		div{
+			width: 200px;
+			height: 200px;
+			background: #dddddd;
+			display: inline-block;
+			margin-right: 10px;
+			border: 1px solid #AAAAAA;
+		}
+
+		.azul{
+			background: #0074D9;
+			border: 1px solid #000;
+		}
+
+		.rojo{
+			background: #FF4136;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<section id="contenedor">
+		<a href="www.facebook.com.ar" id="enlace">Mi Facebook</a>
+		<div class=""></div>
+		<div class=""></div>
+	</section>
+
+	<script type="text/javascript">
+		var elemento = document.createElement("div"),
+			padre = document.getElementById("contenedor"),
+			referencia = document.getElementsByTagName("div")[1];
+
+		//Agregamos atributos al elemento.
+		elemento.setAttribute("class","azul");
+		
+		//Insertamos el elemento en la dicha referencia.
+		padre.insertBefore(elemento,referencia)
+	</script>
+</body>
+</html>

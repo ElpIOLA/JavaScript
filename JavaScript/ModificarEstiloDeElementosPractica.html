@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sitio Web</title>
+
+	<style type="text/css">
+		.thumb {
+			width: 200px;
+			height: 200px;
+			transition: 300ms all ease;
+		}
+
+		.grande {
+			width: 600px;
+			height: 600px;
+		}
+	</style>
+
+</head>
+<body>
+	<form>
+		<input type="button" value="Cambio de Tamaño" name="" onclick="zoom()">
+	</form>
+
+	<img id="thumb" class="thumb" src="E:\WEB\img.jpg" width="400">
+
+	<script type="text/javascript">
+		var zoom = function(){
+
+			//Accedemos a la imagen.
+			var thumb = document.getElementById("thumb");
+			
+			if(thumb.className == "thumb"){
+				thumb.className = "thumb grande";
+			}else{
+				thumb.className = "thumb";
+			}
+
+			//Cambiamos los atributos de la imagen.
+			//thumb.setAttribute("class","thumb grande");
+
+		}	
+	</script>
+</body>
+</html>

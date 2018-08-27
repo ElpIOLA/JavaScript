@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Timers, Timeout e Interval</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		(function(){
+			var contador = 0;
+		
+			var saludo = function(){
+				contador++;
+				console.log(contador);
+
+				setTimeout(saludo,1000);
+				/*
+				if (contador == 5){
+					//Cuando llega a 5 corta con esta funcion.
+					clearInterval(intervalo);
+				}
+				*/
+			}
+			saludo();
+
+			//Creamos un Timeout. Saludo aparece cuando pasen 3 segundos.
+			//setTimeout(saludo,3000);
+
+			//Creamos un Interval. Saludo aparece cada 2 segundos.
+			//var intervalo = setInterval(saludo,2000);
+		}())
+	</script>
+</body>
+</html>

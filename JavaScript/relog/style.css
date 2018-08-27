@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(img.jpg) #000; /*Imagen de fondo*/
+	background-size: cover; /*La imagen se ajusta al tamaño de la pantalla.*/
+	color: #fff; /*Color de texto*/
+	font-size: 16px; /*Tamaño de letra.*/
+}
+
+.wrap {
+	width: 90%; /*Ancho*/
+	max-width: 1000px /*Ancho maximo*/
+	/*margin: auto; Sirve para centrar el relog.*/
+}
+
+.widget {
+	width: 40%;
+	margin: 2em;
+}
+
+.widget p {
+	display: inline-block;
+	line-height: 1em;
+}
+
+.fecha {
+	font-family: Oswald, Arial;
+	text-align: center; /*Centramos*/
+	font-size: 1.5em; /*Tamaño de letra*/
+	margin-bottom: 0.3125em;
+	background: rgba(0,0,0,.5); /*Color oscuro con transparencia .5*/
+	padding: 20px; 
+	width: 100%;
+}
+
+.reloj {
+	font-family: Oswald, Arial;
+	width: 100%;
+	padding: 20px;
+	font-size: 4em;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+}
+
+.reloj .caja-segundos {
+	display: inline-block;
+}
+
+.reloj .segundos,
+.reloj .ampm {
+	font-size: 2rem;
+	display: block;
+}
